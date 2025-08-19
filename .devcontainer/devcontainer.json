@@ -6,7 +6,7 @@
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
-    "workspaceFolder": "/workspace",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
     "postCreateCommand": "dotnet restore",
     "forwardPorts": [ 5000 ],
     "portsAttributes": {
