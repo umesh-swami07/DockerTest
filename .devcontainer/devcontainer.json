@@ -1,11 +1,15 @@
 {
-  "name": "Microservice Dev",
-  "dockerComposeFile": "../docker-compose.yml",
-  "service": "api",
-  "workspaceFolder": "/workspace",
-  "postCreateCommand": "dotnet restore",
-  "forwardPorts": [5000],
-  "portsAttributes": {
-    "5000": { "label": "Microservice API" }
-  }
+    "name": "Microservice Dev",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "api",
+    "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": "dotnet restore",
+    "forwardPorts": [ 5000 ],
+    "portsAttributes": {
+        "5000": { "label": "Microservice API" }
+    }
 }
