@@ -1,0 +1,11 @@
+{
+  "name": "Microservice Dev",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "api",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "dotnet restore",
+  "forwardPorts": [5000],
+  "portsAttributes": {
+    "5000": { "label": "Microservice API" }
+  }
+}
